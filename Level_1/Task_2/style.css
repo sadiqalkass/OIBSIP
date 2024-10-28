@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General style */
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    height: 300vh;
+
+}
+.header--primary{
+    text-align: center;
+    color: #333;
+    font-size: 3.5rem;
+    letter-spacing: .2rem;
+    background-image: linear-gradient(to right, #333, gray);
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+section{
+    padding: 1.5rem;
+    width: 100%;
+}
+main{
+    width: 70%;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.section-divider{
+    width: 10%;
+    margin: auto;
+    border: dotted 1rem gray;
+    border-bottom: none;
+}
+
+/* Header */
+
+.header__section {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    background-position: center;
+    background: linear-gradient(to bottom right, rgba(220, 219, 219, 0.865), rgba(152, 150, 150, 0.765)), url(/Img/header_img.jpg);
+    background-size: cover;
+}
+.header__img-box img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.header__section h1{
+    padding: 1rem;
+    font-size: 3rem;
+    text-transform: capitalize;
+    letter-spacing: .5rem;
+    color: whitesmoke;
+}
+
+.header__section .header__section-details{
+    display: flex;
+    height:3%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: rgb(62, 62, 62);
+}
+
+.header__section .header__section-details span{
+    letter-spacing: .2rem;
+}
+
+/* Nav section */
+
+.nav__section{
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0;
+    box-shadow: 1rem .1rem 1rem rgba(3, 3, 3, 0.24);
+    z-index: 100;
+}
+.nav__section ul{
+    margin: auto;
+    font-size: 2rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* About Me */
+
+.about-me__section{
+    padding-top: 3rem;
+}
+
+.about-me__section .about-me__section--cont{
+    padding: 0 1.5rem;
+    padding-top: 3rem;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.about-me__section--fr-half img{
+    width: 80%;
+    height: 70%;
+    border-radius: 3px;
+}
+
+.about-me__section--sec-half{
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+
+.about-me__section--sec-half span{
+    padding: 1rem;
+}
+
+/* My Skills */
+
+.my-skills__scection{
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.my-skills__section--cont{
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.my-skills__section--cont-skill{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-top: 2rem;
+}
+
+.my-skills__section--cont-skill .my-skill{
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    font-size: 1.3rem;
+    color: whitesmoke;
+}
+
+.fr-skill{
+    background-color: blue;
+}
+.sec-skill{
+    background-color: green;
+}
+.th-skill{
+    background-color: mediumpurple;
+}
+
+.skill-pointer{
+    position: absolute;
+    height: 100%;
+    top: 95%;
+    border: dashed gray 3px;
+    padding: 1rem;
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+}
+
+.fr-pointer{
+    left: 8%;
+}
+.sec-pointer{
+    left: 50%;
+}
+.th-pointer{
+    left: 92%;
+}
+
+.skill--details-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: -96%;
+    width: 100%;
+}
+
+.skill--detail{
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: dashed 3px gray;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill--detail span{
+    padding: .3rem 0rem;
+    font-weight: 600;
+}
+
+.fr-skill-detail{
+    transform: translateX(-2rem);
+}
+.th-skill-detail{
+    transform: translateX(2rem);
+}
+
+
+/* Footer Section */
+
+footer{
+    width: 100%;
+    position: sticky;
+    top: 100%;
+    border-top: 1px solid  black;
+    background-color: #333;
+    color: whitesmoke;
+}
+
+.footer__section--lists{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 3rem;
+}
+.footer__section--text{
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+.footer__section--link ion-icon{
+    font-size: 2rem;
+    color: whitesmoke;
+}

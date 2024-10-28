@@ -1,0 +1,11 @@
+{
+  "name": "oaises-tasks",
+  "version": "1.0.0",
+  "description": "This is my level 1 to 3 tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sadiq <saddayyub@gmail.com>",
+  "license": "ISC"
+}

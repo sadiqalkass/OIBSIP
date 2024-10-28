@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task_3</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <form onsubmit="return false">
+            <h1>Tempereture Converter</h1>
+            <div class="input-cont">
+                <div class="form-div">
+                    <label for="username">Degrees</label>
+                      <input type="text" id="degrees" value="" class="input" autofocus placeholder="Enter degrees">
+                </div>
+                <div class="form-div">
+                    <label for="file">Type</label>
+                    <select name="section__selection" id="typeOfDeg" required>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="kelvin">kelvin</option>
+                    </select>
+                </div>         
+            </div>
+            <div class="form-div">
+                <label for="username">Celcius</label>
+                  <input type="text" name="degrees" id="result" class="input result" value="" placeholder="Result">
+            </div>
+            <button onclick="tempretureConvertion()">Convert</button>
+        </form>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
