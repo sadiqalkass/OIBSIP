@@ -2,9 +2,72 @@ class Calculator{
     constructor(frScreen, secSrceen){
         this.frScreen = frScreen
         this.secSrceen = secSrceen
-        clear()
+        this.clear()
     }
 
+    clear() {
+        this.calOpration = ''
+        this.currentNum = ''
+        this.previousNum = ''
+    }
+
+    appendNum(num) {
+        if (this.currentNum == '') {
+            this.currentNum = num
+        }else{
+            this.currentNum = this.currentNum + num
+        }
+    }
+    
+    
+    chooseOpr(opration) {
+        if(this.currentNum === '') return
+        if (this.previousNum !== '') {
+            this.compute()
+        }
+        this.calOpration = opration
+        this.previousNum = this.currentNum
+        this.currentNum = ''
+    }
+    updateOutput() {
+        if (this.previousNum === '') {
+            frScreen.innerText = ''
+        }
+        if (this.calOpration !== '') {
+            frScreen.innerText = `${this.previousNum} ${this.calOpration}`
+        }
+        secSrceen.innerText = this.currentNum
+    } 
+
+    compute() {
+        let answer
+        let prev = Number(this.previousNum)
+        let curr = Number(this.currentNum)
+        switch (this.calOpration) {
+            case "+":
+                answer = prev + curr
+                break;
+            case "x":
+                answer = prev * curr
+                break;
+            case "-":
+                answer = prev - curr
+                break;
+            case "÷":
+                answer = prev / curr
+                break;
+            case "√":
+                answer = Math.sqrt(prev)
+                break;
+        }
+        this.currentNum = answer
+        this.previousNum = ''
+        this.calOpration = ''
+    }
+
+    deleteOp() {
+        this.currentNum = this.currentNum.toString().slice(0,-1)
+    }   
 }
 const numBtns = document.querySelectorAll("[data-num-btn]")
 const oprationBtns = document.querySelectorAll('[data-opration-btn]')
@@ -14,101 +77,39 @@ const equalBtn = document.querySelector('[data-equal-btn]')
 let frScreen = document.getElementById("cal-screen")
 let secSrceen = document.getElementById("answer-screen")
 
-let currentNum = '';
+/* let currentNum = '';
 let previousNum = '';
-let calOpration = '';
+let calOpration = ''; */
+
+const calculator = new Calculator(frScreen,secSrceen)
 
 
-function appendNum(num) {
-    if (currentNum == '') {
-        currentNum = num
-    }else{
-        currentNum = currentNum + num
-    }
-}
-
-function clear() {
-    calOpration = ''
-    currentNum = ''
-    previousNum = ''
-}
-
-function chooseOpr(opration) {
-    if(currentNum === '') return
-    if (previousNum !== '') {
-        compute()
-    }
-    calOpration = opration
-    previousNum = currentNum
-    currentNum = ''
-}
-function updateOutput() {
-    if (previousNum === '') {
-        frScreen.innerText = ''
-    }
-    if (calOpration !== '') {
-        frScreen.innerText = `${previousNum} ${calOpration}`
-    }
-    secSrceen.innerText = currentNum
-}
-
-function compute() {
-    let answer
-    let prev = Number(previousNum)
-    let curr = Number(currentNum)
-    switch (calOpration) {
-        case "+":
-            answer = prev + curr
-            break;
-        case "x":
-            answer = prev * curr
-            break;
-        case "-":
-            answer = prev - curr
-            break;
-        case "÷":
-            answer = prev / curr
-            break;
-        case "√":
-            answer = Math.sqrt(prev)
-            break;
-        default:
-            console.log("something else")
-            break;
-    }
-    currentNum = answer
-    previousNum = ''
-    calOpration = ''
-}
-function deleteOp() {
-    currentNum = currentNum.toString().slice(0,-1)
-}
 
 numBtns.forEach(btn => {
     btn.addEventListener("click",() =>{
-        appendNum(btn.innerText)
-        updateOutput()
+        calculator.appendNum(btn.innerText)
+        calculator.updateOutput()
     })
 })
 
 oprationBtns.forEach(btn => {
     btn.addEventListener("click",() =>{
-        chooseOpr(btn.innerText)
-        updateOutput()
+        calculator.chooseOpr(btn.innerText)
+        calculator.updateOutput()
     })
 })
 
 allClearbtn.addEventListener("click",() =>{
-    clear()
-    updateOutput()
+    calculator.clear()
+    calculator.updateOutput()
 })
 
 equalBtn.addEventListener("click",() =>{
-    compute()
-    updateOutput()
+    calculator.compute()
+    calculator.updateOutput()
 })
 delBtn.addEventListener("click",() =>{
-    deleteOp()
-    updateOutput()
+    calculator.deleteOp()
+    calculator.updateOutput()
 })
 
