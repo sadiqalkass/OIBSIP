@@ -77,10 +77,6 @@ const equalBtn = document.querySelector('[data-equal-btn]')
 let frScreen = document.getElementById("cal-screen")
 let secSrceen = document.getElementById("answer-screen")
 
-/* let currentNum = '';
-let previousNum = '';
-let calOpration = ''; */
-
 const calculator = new Calculator(frScreen,secSrceen)
 
 
