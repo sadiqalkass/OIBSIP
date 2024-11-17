@@ -67,6 +67,10 @@ main{
     text-align: center;
     cursor: pointer;
 }
+
+.btn:hover{
+    opacity: .75;
+}
 /* Header */
 
 .header__section{
@@ -112,6 +116,7 @@ main{
 }
 
 .tasks__section .task{
+    position: relative;
     padding: 1rem;
     text-align: center;
     background-color: whitesmoke;
@@ -124,8 +129,12 @@ main{
     line-height: 1.7rem;
     height: 100px;
     display: block;
+    overflow: hidden;
 }
 .tasks__section .btn-cont{
+    position: sticky;
+    bottom: 0;
+    top: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -136,7 +145,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
+    padding: .4rem;
 }
 .task-head .date{
     font-size: 1rem;
@@ -196,4 +205,8 @@ textarea{
 label{
     padding-left: .5rem;
     font-size: 2rem;
+}
+/* Completed task */
+.completed-task__section .completed{
+    cursor: default;
 }

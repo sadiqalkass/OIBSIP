@@ -12,10 +12,9 @@
                     <hr class="task-divider">
                     <p class="task-details"><%= task.body %></p>
                     <div class="btn-cont">
-                        <form action="" class="btn-form" method="post">
-                            <input type="hidden" name="taskId" value="<%= task._id %>">
-                            <button type="submit" class="btn-complete btn">Completed</button>
-                        </form>
+                        <div class="btn-form">
+                            <button class="btn-complete btn completed">Completed</button>
+                        </div>
                         <form action="/delete" class="btn-form" method="post">
                             <input type="hidden" name="taskId" value="<%= task._id %>">
                             <input type="hidden" name="complete" value="<%= task.complete %>">
