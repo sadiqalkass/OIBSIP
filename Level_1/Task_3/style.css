@@ -38,7 +38,7 @@ select{
 }
 input::placeholder,
 select::placeholder{
-    color: black;
+    color: gray;
 }
 button{
     border: none;

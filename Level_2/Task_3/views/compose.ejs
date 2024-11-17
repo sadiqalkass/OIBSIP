@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+<section class="compose-task__section">
+    <!-- <h2 class="header__secondary">Compose Task</h2> -->
+    <form action="/compose" method="post"  class="compose-task__form">
+        <label for="">Tilte</label>
+        <input type="text" name="title" value="<%= editTitle %>" required autofocus>
+        <input type="hidden" name="id" value="<%= editTaskId %>">
+        <label for="Body">Body</label>
+        <textarea name="body" id="" rows="10" cols="30" value="" required><%= editBody %></textarea>
+        <button type="submit" class="submit-btn btn">Submit</button>
+    </form>
+</section>
+<%- include("partials/footer"); -%>

@@ -1,0 +1,32 @@
+<%- include("partials/header"); -%>
+</section>
+    <h2 class="header__secondary">My Tasks</h2>
+        <h2><%= notask %></h2>
+    <section class="tasks__section">
+        <% Tasks.forEach((task)=>{ %>
+        <div class="task">
+            <div class="task-head">
+                <h3 class="header__tertiary"><%= task.title %></h3>
+                <span class="date">Created: <%= task.date %></span>
+            </div>
+            <hr class="task-divider">
+            <p class="task-details"><%= task.body %></p>
+            <div class="btn-cont">
+                <form action="/complete" class="btn-form" method="post">
+                    <input type="hidden" name="taskId" value="<%= task._id %>">
+                    <button type="submit" class="btn-complete btn">Complete</button>
+                </form>
+                <form action="/update" class="btn-form" method="post">
+                    <input type="hidden" name="taskId" value="<%= task._id %>">
+                    <button type="submit" class="btn-update btn">Update</button>
+                </form>
+                <form action="/delete" class="btn-form" method="post">
+                    <input type="hidden" name="taskId" value="<%= task._id %>">
+                    <button type="submit" class="btn-delete btn">Delete</button>
+                </form>
+
+            </div>
+        </div>
+        <% }) %>
+    </section>
+<%- include("partials/footer"); -%>

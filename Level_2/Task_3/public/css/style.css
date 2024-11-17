@@ -1,0 +1,199 @@
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Gen Style */
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+body{
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: ghostwhite;
+}
+.header__primary{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: .3rem;
+    padding: .5rem;
+    color: rgb(209, 214, 235);
+    font-family:  cursive;
+}
+.header__secondary{
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: .5rem;
+    padding: .5rem;
+    color: blue;
+}
+.header__tertiary{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .3rem;
+    padding: .5rem;
+    color: gray;
+}
+
+main{
+    padding: 1rem;
+}
+
+.btn-form{
+    width: 100%;
+}
+.btn{
+    padding: 1.2rem;
+    color: whitesmoke;
+    border-radius: 1.5rem; 
+    border: none;
+    outline: none;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+}
+/* Header */
+
+.header__section{
+    width: 100%;
+    padding: .5rem;
+    background-color: rgb(46, 91, 237);
+    color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.header__section-nav{
+    padding-top: .3rem;
+    width: 70%;
+    margin: auto;
+}
+
+.header__section-ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header__section-link a{
+    color: ghostwhite;
+    font-size: 1.3rem;
+}
+
+.header__section-link a:hover{
+    color: rgb(221, 221, 252);
+}
+
+/* Tasks */
+
+.tasks__section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1.5rem;
+    padding: 1rem;
+    padding-top: 2rem;
+}
+
+.tasks__section .task{
+    padding: 1rem;
+    text-align: center;
+    background-color: whitesmoke;
+    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.265);
+    border-radius: 1rem;
+}
+
+.task-details{
+    color: #333;
+    line-height: 1.7rem;
+    height: 100px;
+    display: block;
+}
+.tasks__section .btn-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    width: 100%;
+}
+.task-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+.task-head .date{
+    font-size: 1rem;
+    color: gray;
+}
+
+.btn-complete{
+    background-color: blue;
+}
+
+.btn-update{
+    background-color: green;
+}
+.btn-delete{
+    background-color: red;
+}
+
+.task-divider{
+    padding: .5rem;
+    border-top: 1px solid black;
+    border-left:none ;
+}
+
+/* Compose Task */
+
+.compose-task__section{
+    width: 100%;
+    padding-top: 4rem;
+}
+
+.compose-task__form{
+    display: flex;
+    flex-direction: column;
+    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.265);
+    background-color: whitesmoke;
+    width: 50%;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+input,
+textarea{
+    padding: 1.5rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 1rem;
+    outline: #333 1px solid;
+}
+
+.submit-btn{
+    background-color: #333;
+}
+.submit-btn:hover{
+    background-color: rgb(96, 95, 95);
+}
+label{
+    padding-left: .5rem;
+    font-size: 2rem;
+}

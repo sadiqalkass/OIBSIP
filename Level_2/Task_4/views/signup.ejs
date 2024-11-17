@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%>
+
+<section class="login_bd">
+    <div class="form__div">
+        <h2 class="login__title">Sign Up</h2>
+        <h3 class="err-msg"><%= errmsg %></h3>
+       <form action="/signup" method="post" class="login__form">
+          <div class="form-div fr-div">
+              <label for="username">Name</label>
+                <input type="text" name="username"  class="username email" autofocus placeholder="Enter your Name" required>
+          </div>
+          <div class="form-div fr-div">
+              <label for="username">Email</label>
+                <input type="text" name="email"  class="username email" autofocus placeholder="Enter your Email" required>
+          </div>
+          <div class="form-div">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <div class="form-div">
+              <label for="password">Secret</label>
+              <textarea type="text" name="secret" id="secret"  cols="10" rows="10" placeholder="Enter your Secret" required></textarea>
+          </div>
+          <div class="btn-cont">
+              <button class="button__sub"id="login__button">Register</button>
+          </div>
+       </form>
+  </div>
+</section>
+
+<%- include("partials/footer"); -%>
