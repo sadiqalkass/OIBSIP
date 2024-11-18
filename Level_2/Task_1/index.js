@@ -1,6 +1,6 @@
 class Calculator{
     constructor(frScreen, secSrceen){
-        this.frScreen = frScreen
+        this.frScreen = frScreen 
         this.secSrceen = secSrceen
         this.clear()
     }
